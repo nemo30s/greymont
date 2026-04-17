@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 import logoIcon from '../assets/logo-icon.png'
 
@@ -10,9 +11,34 @@ const LINKS = [
 ]
 
 export default function Navbar() {
-  return (
-    <div className="fixed top-4 left-0 right-0 z-50 flex items-center justify-between px-8 lg:px-16">
+  const [visible, setVisible] = useState(true)
+  const lastY = useRef(0)
 
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY
+      // Always show at top of page
+      if (y < 60) {
+        setVisible(true)
+      } else {
+        setVisible(y < lastY.current)
+      }
+      lastY.current = y
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  return (
+    <div
+      className="fixed left-0 right-0 z-50 flex items-center justify-between px-8 lg:px-16"
+      style={{
+        top: '16px',
+        transform: visible ? 'translateY(0)' : 'translateY(-120%)',
+        transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+      }}
+    >
       {/* Logo — standalone top left */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
