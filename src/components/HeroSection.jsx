@@ -34,7 +34,7 @@ export default function HeroSection() {
       />
 
       {/* ── Content ── */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6" style={{ gap: '36px', paddingTop: '80px' }}>
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6" style={{ gap: '36px', paddingTop: '120px' }}>
 
         {/* TOP — headline + subheadline */}
         <div className="flex flex-col items-center text-center" style={{ gap: '20px' }}>

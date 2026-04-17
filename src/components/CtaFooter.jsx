@@ -51,9 +51,9 @@ export default function CtaFooter() {
           </a>
         </div>
 
-        <div className="mt-32 pt-8 border-t border-white/10 w-full flex items-center justify-between flex-wrap gap-4">
-          <span className="text-white/40 text-xs font-body">© 2026 Greymont. All rights reserved.</span>
-          <div className="flex items-center gap-6">
+        <div className="mt-32 pt-8 border-t border-white/10 w-full flex items-center justify-between flex-wrap gap-4 text-center sm:text-left">
+          <span className="text-white/40 text-xs font-body w-full sm:w-auto">© 2026 Greymont. All rights reserved.</span>
+          <div className="flex items-center gap-6 w-full sm:w-auto justify-center sm:justify-end">
             <Link to="/privacy" className="text-white/40 text-xs font-body hover:text-white/60 transition-colors">Privacy</Link>
             <Link to="/terms" className="text-white/40 text-xs font-body hover:text-white/60 transition-colors">Terms</Link>
             <a href="mailto:diaconu.ionut029@gmail.com" className="text-white/40 text-xs font-body hover:text-white/60 transition-colors">Contact</a>

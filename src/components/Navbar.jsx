@@ -14,7 +14,13 @@ export default function Navbar() {
     <div className="fixed top-4 left-0 right-0 z-50 flex items-center justify-between px-8 lg:px-16">
 
       {/* Logo — standalone top left */}
-      <img src={logoIcon} alt="Greymont" className="h-16 w-16 object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="focus:outline-none"
+        aria-label="Back to top"
+      >
+        <img src={logoIcon} alt="Greymont" className="h-16 w-16 object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
+      </button>
 
       {/* Nav pill — centered */}
       <nav
