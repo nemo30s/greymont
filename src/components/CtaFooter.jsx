@@ -44,7 +44,7 @@ export default function CtaFooter() {
             <ArrowUpRight size={15} />
           </a>
           <a
-            href="#"
+            href="#services"
             className="bg-white text-black rounded-full px-6 py-3 text-sm font-body font-medium hover:bg-white/90 transition-colors"
           >
             See Our Work

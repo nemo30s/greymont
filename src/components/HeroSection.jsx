@@ -101,7 +101,7 @@ export default function HeroSection() {
             <ArrowUpRight size={14} />
           </a>
           <a
-            href="#"
+            href="#services"
             className="bg-white text-black rounded-full font-body font-medium hover:bg-white/90 transition-colors"
             style={{ padding: '10px 22px', fontSize: '13px' }}
           >
