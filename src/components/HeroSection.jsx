@@ -34,18 +34,18 @@ export default function HeroSection() {
       />
 
       {/* ── Content ── */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6" style={{ gap: '36px', paddingTop: '120px' }}>
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 pt-20 md:pt-[120px]" style={{ gap: '28px' }}>
 
         {/* TOP — headline + subheadline */}
         <div className="flex flex-col items-center text-center" style={{ gap: '20px' }}>
           <motion.h1
-            className="font-heading italic text-white leading-[0.88] tracking-[-2px]"
-            style={{ fontSize: 'clamp(2.6rem, 5.5vw, 4.8rem)' }}
+            className="font-heading italic text-white leading-[0.9] tracking-tight md:tracking-[-2px]"
+            style={{ fontSize: 'clamp(2rem, 5.5vw, 4.8rem)' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.2 }}
           >
-            <span style={{ display: 'block', whiteSpace: 'nowrap', marginBottom: '6px' }}>
+            <span className="md:whitespace-nowrap" style={{ display: 'block', marginBottom: '6px' }}>
               <BlurText
                 text="Web design, SEO & AI automation"
                 delay={80}
