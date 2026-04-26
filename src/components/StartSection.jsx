@@ -1,5 +1,6 @@
 import { ArrowUpRight } from 'lucide-react'
 import { motion } from 'motion/react'
+import { Link } from 'react-router-dom'
 import HlsVideo from './HlsVideo'
 
 const SRC = 'https://stream.mux.com/9JXDljEVWYwWu01PUkAemafDugK89o01BR6zqJ3aS9u00A.m3u8'
@@ -76,13 +77,13 @@ export default function StartSection() {
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.6, delay: 0.45, ease: 'easeOut' }}
         >
-          <a
-            href="https://calendly.com/diaconu-ionut029/30min"
+          <Link
+            to="/book"
             className="inline-flex items-center gap-1.5 liquid-glass-strong rounded-full px-6 py-3 text-white text-sm font-body font-medium hover:opacity-90 transition-opacity"
           >
             Book a Free Call
             <ArrowUpRight size={15} />
-          </a>
+          </Link>
         </motion.div>
 
       </div>

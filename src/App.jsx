@@ -9,6 +9,7 @@ import Testimonials from './components/Testimonials'
 import CtaFooter from './components/CtaFooter'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
+import Book from './pages/Book'
 
 function Home() {
   return (
@@ -33,6 +34,7 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/terms" element={<Terms />} />
+      <Route path="/book" element={<Book />} />
     </Routes>
   )
 }

@@ -1,5 +1,6 @@
 import { ArrowUpRight } from 'lucide-react'
 import { motion } from 'motion/react'
+import { Link } from 'react-router-dom'
 
 function FeatureVideo({ videoSrc, zoomIn }) {
   return (
@@ -30,13 +31,13 @@ function ChessRow({ title, body, cta, videoSrc, looped, reverse }) {
       >
         <h3 className="text-3xl md:text-4xl font-heading italic text-white leading-tight">{title}</h3>
         <p className="text-white/60 font-body font-light text-base md:text-lg leading-relaxed">{body}</p>
-        <a
-          href="https://calendly.com/diaconu-ionut029/30min"
+        <Link
+          to="/book"
           className="liquid-glass-strong rounded-full px-5 py-2.5 text-white text-sm font-body font-medium flex items-center gap-1.5 hover:opacity-90 transition-opacity"
         >
           {cta}
           <ArrowUpRight size={14} />
-        </a>
+        </Link>
       </motion.div>
 
       {/* Media side */}

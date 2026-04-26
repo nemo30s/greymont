@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
 import { ArrowUpRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import BlurText from './BlurText'
 import HlsVideo from './HlsVideo'
 import ThreeLogo from './ThreeLogo'
@@ -92,14 +93,14 @@ export default function HeroSection() {
           animate={{ filter: 'blur(0px)', opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.7, ease: 'easeOut' }}
         >
-          <a
-            href="https://calendly.com/diaconu-ionut029/30min"
+          <Link
+            to="/book"
             className="liquid-glass-strong rounded-full text-white font-body font-medium flex items-center gap-1.5 hover:opacity-90 transition-opacity"
             style={{ padding: '10px 22px', fontSize: '13px' }}
           >
             Start a Project
             <ArrowUpRight size={14} />
-          </a>
+          </Link>
           <a
             href="#services"
             className="bg-white text-black rounded-full font-body font-medium hover:bg-white/90 transition-colors"

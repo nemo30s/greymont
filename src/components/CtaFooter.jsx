@@ -36,13 +36,13 @@ export default function CtaFooter() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
-          <a
-            href="https://calendly.com/diaconu-ionut029/30min"
+          <Link
+            to="/book"
             className="liquid-glass-strong rounded-full px-6 py-3 text-white text-sm font-body font-medium flex items-center gap-1.5 hover:opacity-90 transition-opacity"
           >
             Book a Free Call
             <ArrowUpRight size={15} />
-          </a>
+          </Link>
           <a
             href="#services"
             className="bg-white text-black rounded-full px-6 py-3 text-sm font-body font-medium hover:bg-white/90 transition-colors"

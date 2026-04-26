@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { ArrowUpRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import logoIcon from '../assets/logo-icon.png'
 
 const LINKS = [
@@ -67,14 +68,14 @@ export default function Navbar() {
         </div>
 
         <div style={{ paddingLeft: '6px', paddingRight: '4px' }}>
-          <a
-            href="https://calendly.com/diaconu-ionut029/30min"
+          <Link
+            to="/book"
             className="flex items-center gap-1 bg-white text-black rounded-full font-body font-medium hover:bg-white/90 transition-colors whitespace-nowrap"
             style={{ padding: '7px 14px', fontSize: '13px' }}
           >
             Get Started
             <ArrowUpRight size={13} />
-          </a>
+          </Link>
         </div>
       </nav>
 
