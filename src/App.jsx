@@ -10,6 +10,10 @@ import CtaFooter from './components/CtaFooter'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
 import Book from './pages/Book'
+import WebDesignAntwerpen from './pages/WebDesignAntwerpen'
+import SeoAntwerpen from './pages/SeoAntwerpen'
+import WebshopAntwerpen from './pages/WebshopAntwerpen'
+import AiAutomatisering from './pages/AiAutomatisering'
 
 function Home() {
   return (
@@ -35,6 +39,10 @@ export default function App() {
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/book" element={<Book />} />
+      <Route path="/web-design-antwerpen" element={<WebDesignAntwerpen />} />
+      <Route path="/seo-antwerpen" element={<SeoAntwerpen />} />
+      <Route path="/webshop-antwerpen" element={<WebshopAntwerpen />} />
+      <Route path="/ai-automatisering" element={<AiAutomatisering />} />
     </Routes>
   )
 }

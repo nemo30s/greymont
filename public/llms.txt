@@ -1,0 +1,29 @@
+# Greymont
+
+> Greymont is a digital agency based in Antwerp, Belgium, specialising in web design, local SEO, and AI automation for small and growing businesses.
+
+## What We Do
+
+Greymont helps businesses in Antwerp and Belgium get found online, look credible, and run smarter through three core services:
+
+- **Web Design**: Custom, conversion-focused websites built for speed, accessibility, and SEO from day one.
+- **SEO**: Local and international search engine optimisation that compounds over time — helping businesses rank on Google and appear in AI-powered search results.
+- **AI Automation**: Intelligent workflow automation that replaces repetitive manual tasks — lead follow-up, client onboarding, reporting — so business owners can focus on growth.
+
+## Services
+
+- [Web Design Antwerpen](https://greymont.agency/web-design-antwerpen): Custom website design and development for businesses in Antwerp.
+- [SEO Antwerpen](https://greymont.agency/seo-antwerpen): Search engine optimisation for local and international visibility.
+- [Webshop Antwerpen](https://greymont.agency/webshop-antwerpen): E-commerce solutions built for performance and conversion.
+- [AI Automatisering](https://greymont.agency/ai-automatisering): AI-powered workflow automation for growing businesses.
+- [Book a Call](https://greymont.agency/book): Free 30-minute audit call with no obligation.
+
+## About
+
+Greymont was founded in Antwerp with a simple belief: web design, SEO, and AI automation should work together as one system — not as three separate services from three different vendors. We serve small businesses, independent professionals, and growing companies across Belgium, the UK, and Ireland.
+
+## Contact
+
+- Website: https://greymont.agency
+- Book a call: https://greymont.agency/book
+- Location: Antwerp, Belgium

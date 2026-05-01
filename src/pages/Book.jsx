@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import logoIcon from '../assets/logo-icon.png'
@@ -9,31 +8,10 @@ const BULLETS = [
   { label: 'Duration', value: '30 minutes' },
   { label: 'Format', value: 'Google Meet or phone' },
   { label: 'What to expect', value: 'No pitch, no pressure — just an honest look at what your business needs' },
-  { label: 'Next step', value: 'A clear proposal within 24 hours if it\'s a fit' },
+  { label: 'Next step', value: "A clear proposal within 24 hours if it's a fit" },
 ]
 
 export default function Book() {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-
-    if (window.Calendly) {
-      window.Calendly.initInlineWidget({
-        url: CALENDLY_URL,
-        parentElement: document.getElementById('calendly-inline'),
-        prefill: {},
-        utm: {},
-      })
-    } else {
-      const onLoad = () => {
-        window.Calendly.initInlineWidget({
-          url: CALENDLY_URL,
-          parentElement: document.getElementById('calendly-inline'),
-        })
-      }
-      window.addEventListener('calendly:widget-loaded', onLoad, { once: true })
-      return () => window.removeEventListener('calendly:widget-loaded', onLoad)
-    }
-  }, [])
 
   return (
     <div className="bg-black min-h-screen text-white">
@@ -92,12 +70,12 @@ export default function Book() {
 
           {/* Right — Calendly inline */}
           <div className="liquid-glass rounded-2xl overflow-hidden" style={{ minHeight: '660px' }}>
-            <div
-              id="calendly-inline"
-              style={{
-                minWidth: '300px',
-                height: '660px',
-              }}
+            <iframe
+              src={CALENDLY_URL}
+              width="100%"
+              height="660"
+              style={{ border: 'none' }}
+              title="Book a call"
             />
           </div>
 
