@@ -22,7 +22,7 @@ const FAQS = [
   },
   {
     q: 'Wat kost AI automatisering?',
-    a: 'Dat hangt af van de complexiteit van de workflow. Een eenvoudige leadopvolging kan starten vanaf €800 als eenmalig project. Complexere systemen met meerdere integraties kosten meer. We bespreken dit altijd na een gratis analyse van jouw processen.',
+    a: 'Dat hangt af van de complexiteit van de workflow, het aantal integraties en de mate van maatwerk. Een eenvoudige leadopvolging is een ander project dan een volledig geautomatiseerd onboarding-systeem met custom AI agents. We bespreken dit altijd na een gratis analyse van jouw processen.',
   },
   {
     q: 'Welke tools gebruiken jullie voor automatisering?',
@@ -37,6 +37,20 @@ const FAQS = [
 export default function AiAutomatisering() {
   return (
     <div className="bg-black min-h-screen text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: FAQS.map(({ q, a }) => ({
+              '@type': 'Question',
+              name: q,
+              acceptedAnswer: { '@type': 'Answer', text: a },
+            })),
+          }),
+        }}
+      />
       {/* Top bar */}
       <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 lg:px-16 py-5 border-b border-white/5"
         style={{ background: 'rgba(0,0,0,0.85)', backdropFilter: 'blur(12px)' }}>

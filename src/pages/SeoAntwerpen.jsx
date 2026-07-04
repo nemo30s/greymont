@@ -37,6 +37,20 @@ const FAQS = [
 export default function SeoAntwerpen() {
   return (
     <div className="bg-black min-h-screen text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: FAQS.map(({ q, a }) => ({
+              '@type': 'Question',
+              name: q,
+              acceptedAnswer: { '@type': 'Answer', text: a },
+            })),
+          }),
+        }}
+      />
       {/* Top bar */}
       <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 lg:px-16 py-5 border-b border-white/5"
         style={{ background: 'rgba(0,0,0,0.85)', backdropFilter: 'blur(12px)' }}>
@@ -91,7 +105,7 @@ export default function SeoAntwerpen() {
             Bij Greymont geloven we dat SEO geen mysterie is. Het is een combinatie van technische correctheid, relevante content en lokale signalen die Google vertellen dat jouw bedrijf de beste keuze is voor zoekers in Antwerpen. We leggen je altijd uit wat we doen en waarom.
           </p>
           <p>
-            We werken met Antwerpse kmo's, vrije beroepen en groeiende bedrijven die begrijpen dat online zichtbaarheid direct impact heeft op hun omzet. Of je nu een advocatenkantoor, een kliniek of een retailzaak hebt — de aanpak is altijd op maat.
+            We bouwen SEO-strategieën voor Antwerpse kmo's, vrije beroepen en groeiende bedrijven die begrijpen dat online zichtbaarheid direct impact heeft op hun omzet. Of je nu een advocatenkantoor, een kliniek of een retailzaak hebt — de aanpak is altijd op maat.
           </p>
           <p>
             SEO wordt ook steeds belangrijker buiten Google. Pagina's die goed ranken op Google worden ook geciteerd door AI-tools zoals ChatGPT en Perplexity wanneer mensen vragen stellen over jouw vakgebied. Eén solide SEO aanpak geeft je zichtbaarheid op alle platformen tegelijk.

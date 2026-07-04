@@ -70,25 +70,33 @@ export default function FeaturesChess() {
           <span className="text-white text-sm font-medium font-body">What We Do</span>
         </div>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading italic text-white tracking-tight leading-[0.9]">
-          Everything your brand needs. Nothing it doesn&apos;t.
+          One system. Built to fill your calendar
         </h2>
       </motion.div>
 
       <ChessRow
-        title="Sites that sell, not just impress."
-        body="We design and build conversion-focused websites — fast, accessible, and architected to rank. Every decision is made with your customer journey in mind, from the first pixel to the final CTA."
+        title="The Site"
+        body="A site that sells, not just impresses. Designed to convert, built to rank, ready to grow."
         cta="Book a Call"
         videoSrc="/videos/feature-web.mp4"
         reverse={false}
       />
 
       <ChessRow
-        title="Your business, running itself."
-        body="We map your most repetitive workflows — lead follow-ups, reporting, onboarding, content — and replace them with AI automations that run 24/7. Your team keeps their focus. Your output multiplies."
+        title="The Search"
+        body="SEO baked in from day one. Schema, structure, speed, and search console — built into the architecture, not patched on later."
+        cta="Book a Call"
+        videoSrc="/videos/feature-seo.mp4"
+        reverse={true}
+      />
+
+      <ChessRow
+        title="The Smarts"
+        body="Custom AI features your competitors can't ship. Booking assistants, lead qualifiers, multilingual chatbots — built into the site, not bolted on."
         cta="Book a Call"
         videoSrc="/videos/feature-ai.mp4"
         looped={true}
-        reverse={true}
+        reverse={false}
       />
     </section>
   )

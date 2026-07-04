@@ -14,7 +14,7 @@ const SERVICES = [
 const FAQS = [
   {
     q: 'Wat kost een webshop laten maken in Antwerpen?',
-    a: 'Een professionele webshop bij Greymont start vanaf €600. De prijs hangt af van het aantal producten, de gewenste functionaliteiten en integraties. We bespreken dit altijd transparant tijdens een gratis gesprek.',
+    a: 'De prijs hangt af van het aantal producten, de gewenste functionaliteiten en de integraties met externe systemen (boekhouding, stockbeheer, betalingsproviders). We bespreken dit altijd transparant tijdens een gratis gesprek.',
   },
   {
     q: 'Wat is beter: WordPress/WooCommerce of een custom webshop?',
@@ -30,13 +30,27 @@ const FAQS = [
   },
   {
     q: 'Hoe lang duurt het om een webshop te bouwen?',
-    a: 'Een standaard webshop is binnen 2 tot 3 weken live. Grotere projecten met complexe integraties kunnen iets langer duren. We geven altijd een eerlijke inschatting vooraf.',
+    a: 'Een standaard webshop leveren we binnen 2 tot 3 weken op. Grotere projecten met complexe integraties kunnen langer duren — we geven altijd een eerlijke inschatting vooraf.',
   },
 ]
 
 export default function WebshopAntwerpen() {
   return (
     <div className="bg-black min-h-screen text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: FAQS.map(({ q, a }) => ({
+              '@type': 'Question',
+              name: q,
+              acceptedAnswer: { '@type': 'Answer', text: a },
+            })),
+          }),
+        }}
+      />
       {/* Top bar */}
       <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 lg:px-16 py-5 border-b border-white/5"
         style={{ background: 'rgba(0,0,0,0.85)', backdropFilter: 'blur(12px)' }}>

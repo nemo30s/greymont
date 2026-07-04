@@ -48,17 +48,8 @@ export default function HeroSection() {
           >
             <span className="md:whitespace-nowrap" style={{ display: 'block', marginBottom: '6px' }}>
               <BlurText
-                text="Web design, SEO & AI automation"
+                text="Webdesign, SEO & AI-automatisering uit Antwerpen"
                 delay={80}
-                direction="bottom"
-                animateBy="words"
-              />
-            </span>
-            <span style={{ display: 'block' }}>
-              <BlurText
-                text="built to work as one."
-                delay={80}
-                startDelay={720}
                 direction="bottom"
                 animateBy="words"
               />
@@ -72,8 +63,8 @@ export default function HeroSection() {
             animate={{ filter: 'blur(0px)', opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.7, ease: 'easeOut' }}
           >
-            Design that converts. SEO that compounds. AI that never stops working.
-            Three disciplines, one team, one outcome.
+            Websites, SEO en AI-features als één systeem —
+            gemeten aan één cijfer: geboekte gesprekken met klanten.
           </motion.p>
         </div>
 
@@ -98,7 +89,7 @@ export default function HeroSection() {
             className="liquid-glass-strong rounded-full text-white font-body font-medium flex items-center gap-1.5 hover:opacity-90 transition-opacity"
             style={{ padding: '10px 22px', fontSize: '13px' }}
           >
-            Start a Project
+            Book a Call
             <ArrowUpRight size={14} />
           </Link>
           <a
@@ -106,7 +97,7 @@ export default function HeroSection() {
             className="bg-white text-black rounded-full font-body font-medium hover:bg-white/90 transition-colors"
             style={{ padding: '10px 22px', fontSize: '13px' }}
           >
-            See Our Work
+            What We Do
           </a>
         </motion.div>
 

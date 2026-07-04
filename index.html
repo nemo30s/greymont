@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -12,7 +12,6 @@
     <!-- Primary meta -->
     <title>Greymont — Web Design, SEO & AI Automation Agency</title>
     <meta name="description" content="Greymont is a digital agency based in Antwerp offering web design, local SEO, and AI automation for small and growing businesses. We build sites that convert and strategies that compound." />
-    <meta name="keywords" content="web design Antwerp, SEO agency Belgium, AI automation, local SEO, website design, Greymont agency" />
     <meta name="author" content="Greymont" />
     <link rel="canonical" href="https://greymont.agency/" />
 
@@ -24,8 +23,9 @@
     <meta property="og:image" content="https://greymont.agency/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Greymont — digitaal bureau in Antwerpen voor webdesign, SEO en AI-automatisering" />
     <meta property="og:site_name" content="Greymont" />
-    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale" content="nl_BE" />
 
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -33,26 +33,37 @@
     <meta name="twitter:description" content="Web design, SEO, and AI automation built to work as one." />
     <meta name="twitter:image" content="https://greymont.agency/og-image.png" />
 
-    <!-- Schema.org Organization -->
+    <!-- Schema.org ProfessionalService (service-area business) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
+      "@id": "https://greymont.agency/#business",
       "name": "Greymont",
-      "url": "https://greymont.agency",
+      "url": "https://greymont.agency/",
       "logo": "https://greymont.agency/favicon.png",
       "image": "https://greymont.agency/og-image.png",
-      "description": "Digital agency offering web design, local SEO management, and AI automation for small and growing businesses.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Antwerp",
-        "addressRegion": "Antwerp",
-        "addressCountry": "BE"
-      },
-      "areaServed": ["Belgium", "United Kingdom", "Ireland"],
-      "serviceType": ["Web Design", "SEO", "AI Automation"],
+      "description": "Digitaal bureau in Antwerpen: webdesign, lokale SEO en AI-automatisering voor lokale dienstverleners — samen ontworpen als één systeem.",
+      "email": "hello@greymont.agency",
+      "telephone": "+32491916606",
       "priceRange": "€€",
-      "email": "diaconu.ionut029@gmail.com",
+      "inLanguage": "nl-BE",
+      "founder": {
+        "@type": "Person",
+        "name": "Ionut Diaconu"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Antwerpen" },
+        { "@type": "AdministrativeArea", "name": "Vlaanderen" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
       "sameAs": [
         "https://www.linkedin.com/company/greymont-agency"
       ]
@@ -61,10 +72,7 @@
 
     <!-- Calendly -->
     <link rel="preconnect" href="https://calendly.com" />
-    <link rel="preconnect" href="https://assets.calendly.com" />
     <link rel="dns-prefetch" href="https://calendly.com" />
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -72,7 +80,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <div id="root"></div>
+    <noscript>
+      <h1>Webdesign, SEO &amp; AI-automatisering uit Antwerpen</h1>
+      <p>Greymont is een digitaal bureau in Antwerpen dat webdesign, lokale SEO en AI-automatisering combineert tot één systeem voor lokale dienstverleners. Wij bouwen snelle websites die gevonden worden op Google en bezoekers omzetten in klanten.</p>
+      <ul>
+        <li><a href="/web-design-antwerpen">Webdesign Antwerpen</a></li>
+        <li><a href="/seo-antwerpen">SEO Antwerpen</a></li>
+        <li><a href="/webshop-antwerpen">Webshop Antwerpen</a></li>
+        <li><a href="/ai-automatisering">AI-automatisering</a></li>
+      </ul>
+    </noscript>
+    <div id="root"><h1 style="position:absolute;left:-9999px;">Greymont</h1></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

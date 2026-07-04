@@ -41,7 +41,7 @@ const SECTIONS = [
   },
   {
     title: 'Contact',
-    body: `If you have any questions about these Terms, please contact us at diaconu.ionut029@gmail.com.`,
+    body: `If you have any questions about these Terms, please contact us at hello@greymont.agency.`,
   },
 ]
 

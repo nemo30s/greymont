@@ -14,15 +14,15 @@ const SERVICES = [
 const FAQS = [
   {
     q: 'Wat kost een professionele website in Antwerpen?',
-    a: 'Een professionele website bij Greymont start vanaf €500 voor een clean, conversiegerichte site. De exacte prijs hangt af van de complexiteit, het aantal pagina\'s en welke integraties nodig zijn. We bespreken dit altijd transparant tijdens een gratis gesprek.',
+    a: 'De prijs hangt af van de scope en complexiteit van het project — aantal pagina\'s, integraties, en specifieke functionaliteiten. We bespreken dit altijd transparant tijdens een gratis gesprek, zodat je vooraf precies weet wat je krijgt en wat het kost.',
   },
   {
     q: 'Hoe lang duurt het om een website te bouwen?',
-    a: 'De meeste projecten zijn live binnen 1 tot 2 weken. We werken snel zonder in te boeten op kwaliteit — van ontwerp tot lancering begeleiden we alles.',
+    a: 'We leveren standaard binnen 1 tot 2 weken op. Van ontwerp tot lancering begeleiden we alles — snel, zonder in te boeten op kwaliteit.',
   },
   {
     q: 'Werken jullie alleen met bedrijven in Antwerpen?',
-    a: 'We zijn gevestigd in Antwerpen maar werken met bedrijven door heel België en internationaal. Onze klanten zitten van Antwerpen tot Brussel en Londen.',
+    a: 'We zijn gevestigd in Antwerpen maar bouwen voor bedrijven door heel België en internationaal. Locatie is geen beperking — een goede website werkt overal.',
   },
   {
     q: 'Kan ik mijn website daarna zelf beheren?',
@@ -37,6 +37,20 @@ const FAQS = [
 export default function WebDesignAntwerpen() {
   return (
     <div className="bg-black min-h-screen text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: FAQS.map(({ q, a }) => ({
+              '@type': 'Question',
+              name: q,
+              acceptedAnswer: { '@type': 'Answer', text: a },
+            })),
+          }),
+        }}
+      />
       {/* Top bar */}
       <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 lg:px-16 py-5 border-b border-white/5"
         style={{ background: 'rgba(0,0,0,0.85)', backdropFilter: 'blur(12px)' }}>
@@ -88,10 +102,10 @@ export default function WebDesignAntwerpen() {
             Veel Antwerpse bedrijven hebben een website die er misschien goed uitziet, maar die eigenlijk niets doet. Ze ranken niet op Google, ze converteren geen bezoekers en ze zijn niet geoptimaliseerd voor mobiel. Dat is wat wij anders doen.
           </p>
           <p>
-            Bij Greymont bouwen we websites met één doel: resultaten. Elke beslissing — van de structuur tot de snelheid tot de tekst — is gericht op meer klanten voor jouw business. We werken met Antwerpse kmo's, zelfstandigen en groeiende bedrijven die begrijpen dat een goede website een investering is, geen kostenpost.
+            Bij Greymont bouwen we websites met één doel: resultaten. Elke beslissing — van de structuur tot de snelheid tot de tekst — is gericht op meer klanten voor jouw business. We bouwen voor Antwerpse kmo's, zelfstandigen en groeiende bedrijven die begrijpen dat een goede website een investering is, geen kostenpost.
           </p>
           <p>
-            We combineren web design met SEO en AI-automatisering zodat jouw website niet alleen mooi is, maar ook actief werkt voor je bedrijf — ook als jij slaapt. Onze klanten in Antwerpen zien gemiddeld een significante stijging in online aanvragen binnen de eerste maanden na lancering.
+            We combineren web design met SEO en AI-automatisering zodat jouw website niet alleen mooi is, maar ook actief werkt voor je bedrijf — ook als jij slaapt. Eén systeem, één doel: meer aanvragen genereren via je website.
           </p>
           <p>
             Of je nu een volledig nieuwe website nodig hebt, je huidige site wil verbeteren, of op zoek bent naar een webshop — we bespreken alles tijdens een gratis gesprek van 30 minuten. Geen verplichtingen, geen verborgen kosten.

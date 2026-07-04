@@ -6,7 +6,6 @@ import logoIcon from '../assets/logo-icon.png'
 const LINKS = [
   { label: 'Home', href: '#home' },
   { label: 'Services', href: '#services' },
-  { label: 'Work', href: '#work' },
   { label: 'Process', href: '#process' },
   { label: 'Contact', href: '#contact' },
 ]

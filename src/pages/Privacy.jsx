@@ -29,7 +29,7 @@ const SECTIONS = [
   },
   {
     title: 'Contact',
-    body: `If you have any questions about this Privacy Policy or how we handle your data, please reach out to us at diaconu.ionut029@gmail.com. We aim to respond to all enquiries within two business days.`,
+    body: `If you have any questions about this Privacy Policy or how we handle your data, please reach out to us at hello@greymont.agency. We aim to respond to all enquiries within two business days.`,
   },
 ]
 

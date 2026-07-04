@@ -69,12 +69,10 @@ export default function Book() {
           </div>
 
           {/* Right — Calendly inline */}
-          <div className="liquid-glass rounded-2xl overflow-hidden" style={{ minHeight: '660px' }}>
+          <div className="liquid-glass rounded-2xl overflow-hidden w-full" style={{ height: '660px' }}>
             <iframe
               src={CALENDLY_URL}
-              width="100%"
-              height="660"
-              style={{ border: 'none' }}
+              style={{ width: '100%', height: '100%', border: 'none', display: 'block' }}
               title="Book a call"
             />
           </div>
