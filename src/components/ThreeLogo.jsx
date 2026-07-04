@@ -1,12 +1,17 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 import logoSrc from '../assets/logo-icon.png'
 
 export default function ThreeLogo({ className = '' }) {
   const mountRef = useRef(null)
   const mouseRef = useRef({ x: 0, y: 0 })
+  // Server + first client render show a static logo image; the WebGL canvas only
+  // mounts after hydration. Identical fallback markup on both = no mismatch.
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
 
   useEffect(() => {
+    if (!mounted) return
     const mount = mountRef.current
     if (!mount) return
 
@@ -107,7 +112,24 @@ export default function ThreeLogo({ className = '' }) {
       renderer.dispose()
       if (mount.contains(renderer.domElement)) mount.removeChild(renderer.domElement)
     }
-  }, [])
+  }, [mounted])
+
+  if (!mounted) {
+    return (
+      <div
+        className={className}
+        style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent' }}
+      >
+        <img
+          src={logoSrc}
+          alt="Greymont"
+          width={288}
+          height={288}
+          style={{ width: '80%', height: 'auto', filter: 'brightness(0) invert(1)' }}
+        />
+      </div>
+    )
+  }
 
   return (
     <div

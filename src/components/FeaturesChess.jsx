@@ -1,16 +1,55 @@
+import { useEffect, useRef } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 import { motion } from 'motion/react'
 import { Link } from 'react-router-dom'
 
 function FeatureVideo({ videoSrc, zoomIn }) {
+  // Poster frame (extracted at build time) sits in the server HTML so the card
+  // has a real image before playback starts — good for LCP and no layout shift.
+  const poster = videoSrc.replace(/\.mp4$/, '.jpg')
+  const ref = useRef(null)
+
+  // iOS only autoplays an inline muted video reliably once it's actually in view.
+  // Kick playback off ourselves when the card scrolls into the viewport (and pause
+  // it when it leaves — saves battery and data on mobile).
+  useEffect(() => {
+    const v = ref.current
+    if (!v) return
+    v.muted = true
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          const p = v.play()
+          if (p) p.catch(() => {})
+        } else {
+          v.pause()
+        }
+      },
+      { threshold: 0.25 },
+    )
+    io.observe(v)
+    return () => io.disconnect()
+  }, [])
+
+  const video = (
+    <video
+      ref={ref}
+      src={videoSrc}
+      poster={poster}
+      loop
+      muted
+      playsInline
+      preload="auto"
+      className="w-full h-full object-cover"
+    />
+  )
+
   return (
     <div className="liquid-glass rounded-2xl overflow-hidden w-full aspect-video relative">
       {zoomIn ? (
-        <div className="absolute" style={{ inset: '-7%', width: '114%', height: '114%' }}>
-          <video src={videoSrc} autoPlay loop muted playsInline className="w-full h-full object-cover" />
-        </div>
+        <div className="absolute" style={{ inset: '-7%', width: '114%', height: '114%' }}>{video}</div>
       ) : (
-        <video src={videoSrc} autoPlay loop muted playsInline className="w-full h-full object-cover" />
+        video
       )}
       <div className="absolute inset-0 pointer-events-none rounded-2xl"
         style={{ boxShadow: 'inset 0 0 60px rgba(0,0,0,0.4)' }} />
@@ -98,6 +137,39 @@ export default function FeaturesChess() {
         looped={true}
         reverse={false}
       />
+
+      {/* Explore services — titled section with crawlable links to each service page */}
+      <div className="mt-24 text-center">
+        <div className="inline-flex liquid-glass rounded-full px-3.5 py-1 mb-4">
+          <span className="text-white text-sm font-medium font-body">Onze diensten</span>
+        </div>
+        <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading italic text-white tracking-tight leading-[0.95] mb-3">
+          Bekijk elke dienst in detail.
+        </h3>
+        <p className="text-white/50 font-body font-light text-sm md:text-base max-w-md mx-auto mb-10">
+          Aanpak, prijzen en veelgestelde vragen — per dienst uitgelegd.
+        </p>
+      </div>
+      <nav aria-label="Onze diensten" className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {[
+          { label: 'Webdesign Antwerpen', desc: 'Websites die converteren', href: '/web-design-antwerpen' },
+          { label: 'SEO Antwerpen', desc: 'Hoger ranken op Google', href: '/seo-antwerpen' },
+          { label: 'Webshop Antwerpen', desc: 'E-commerce op maat', href: '/webshop-antwerpen' },
+          { label: 'AI-automatisering', desc: 'Workflows automatiseren', href: '/ai-automatisering' },
+        ].map((l) => (
+          <Link
+            key={l.href}
+            to={l.href}
+            className="group liquid-glass rounded-xl p-5 flex flex-col justify-between gap-6 hover:bg-white/5 transition-colors"
+          >
+            <div>
+              <div className="text-white font-body font-medium text-sm mb-1">{l.label}</div>
+              <div className="text-white/40 font-body text-xs">{l.desc}</div>
+            </div>
+            <ArrowUpRight size={15} className="text-white/30 group-hover:text-white transition-colors" />
+          </Link>
+        ))}
+      </nav>
     </section>
   )
 }

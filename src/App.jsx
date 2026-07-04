@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { Analytics } from '@vercel/analytics/react'
 import PageMeta from './components/PageMeta'
 import Navbar from './components/Navbar'
@@ -16,7 +17,7 @@ import SeoAntwerpen from './pages/SeoAntwerpen'
 import WebshopAntwerpen from './pages/WebshopAntwerpen'
 import AiAutomatisering from './pages/AiAutomatisering'
 
-function Home() {
+export function Home() {
   return (
     <div className="bg-black min-h-screen">
       <Navbar />
@@ -32,10 +33,22 @@ function Home() {
   )
 }
 
+// Client-side navigation keeps the previous scroll position, so a link clicked
+// near the bottom of one page would land you at the bottom of the next. Reset to
+// the top whenever the path changes (hash-only changes are left alone).
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
+
 export default function App() {
   return (
     <>
       <PageMeta />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/privacy" element={<Privacy />} />
