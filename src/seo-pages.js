@@ -32,6 +32,16 @@ export const PAGE_SEO = {
     description:
       'Plan een gratis gesprek van 30 minuten met Greymont. Geen verplichtingen — een eerlijke blik op wat jouw bedrijf nodig heeft.',
   },
+  '/over-ons': {
+    title: 'Over Greymont — de persoon achter het bureau',
+    description:
+      'Greymont is Ionuț Diaconu — één bouwer die je website ontwerpt, bouwt, live zet en maandelijks rapporteert. Het vakmanschap van een bureau, de directheid van één aanspreekpunt.',
+  },
+  '/contact': {
+    title: 'Contact — Greymont Antwerpen',
+    description:
+      'Neem contact op met Greymont in Antwerpen. Bel +32 491 91 66 06, mail hello@greymont.agency of plan direct een gratis gesprek in.',
+  },
   '/privacy': {
     title: 'Privacybeleid — Greymont',
     description:

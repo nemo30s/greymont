@@ -17,6 +17,8 @@ const SSR_ROUTES = [
   '/webshop-antwerpen',
   '/ai-automatisering',
   '/book',
+  '/over-ons',
+  '/contact',
   '/privacy',
   '/terms',
 ]

@@ -67,7 +67,7 @@ export default function CtaFooter() {
           <div className="flex items-center gap-6 w-full sm:w-auto justify-center sm:justify-end">
             <Link to="/privacy" className="text-white/40 text-xs font-body hover:text-white/60 transition-colors">Privacy</Link>
             <Link to="/terms" className="text-white/40 text-xs font-body hover:text-white/60 transition-colors">Voorwaarden</Link>
-            <a href="mailto:hello@greymont.agency" className="text-white/40 text-xs font-body hover:text-white/60 transition-colors">Contact</a>
+            <Link to="/contact" className="text-white/40 text-xs font-body hover:text-white/60 transition-colors">Contact</Link>
           </div>
         </div>
       </div>
