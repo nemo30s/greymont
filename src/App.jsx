@@ -1,38 +1,45 @@
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { Analytics } from '@vercel/analytics/react'
 import PageMeta from './components/PageMeta'
-import Navbar from './components/Navbar'
-import HeroSection from './components/HeroSection'
-import StartSection from './components/StartSection'
-import FeaturesChess from './components/FeaturesChess'
-import FeaturesGrid from './components/FeaturesGrid'
-import StatsSection from './components/StatsSection'
-import CtaFooter from './components/CtaFooter'
-import Privacy from './pages/Privacy'
-import Terms from './pages/Terms'
-import Book from './pages/Book'
-import OverOns from './pages/OverOns'
-import Contact from './pages/Contact'
-import WebDesignAntwerpen from './pages/WebDesignAntwerpen'
-import SeoAntwerpen from './pages/SeoAntwerpen'
-import WebshopAntwerpen from './pages/WebshopAntwerpen'
-import AiAutomatisering from './pages/AiAutomatisering'
 
-export function Home() {
-  return (
-    <div className="bg-black min-h-screen">
-      <Navbar />
-      <main>
-        <div id="home"><HeroSection /></div>
-        <div id="process" style={{ scrollMarginTop: '80px' }}><StartSection /></div>
-        <div id="services" style={{ scrollMarginTop: '80px' }}><FeaturesChess /></div>
-        <FeaturesGrid />
-        <StatsSection />
-        <div id="contact" style={{ scrollMarginTop: '80px' }}><CtaFooter /></div>
-      </main>
-    </div>
-  )
+// Preload-aware lazy: suspends until the chunk is loaded, but renders
+// synchronously once it is. main.jsx preloads the current route's chunk before
+// hydrateRoot, so the initial route never suspends during hydration — no
+// fallback flash, no mismatch. Other routes load on demand during navigation.
+function lazyRoute(factory) {
+  let Mod = null
+  let promise = null
+  function preload() {
+    if (!promise) promise = factory().then((m) => { Mod = m.default })
+    return promise
+  }
+  function LazyRoute(props) {
+    if (!Mod) throw preload()
+    return <Mod {...props} />
+  }
+  LazyRoute.preload = preload
+  return LazyRoute
+}
+
+const ROUTES = [
+  { path: '/', Comp: lazyRoute(() => import('./pages/Home.jsx')) },
+  { path: '/privacy', Comp: lazyRoute(() => import('./pages/Privacy.jsx')) },
+  { path: '/terms', Comp: lazyRoute(() => import('./pages/Terms.jsx')) },
+  { path: '/book', Comp: lazyRoute(() => import('./pages/Book.jsx')) },
+  { path: '/over-ons', Comp: lazyRoute(() => import('./pages/OverOns.jsx')) },
+  { path: '/contact', Comp: lazyRoute(() => import('./pages/Contact.jsx')) },
+  { path: '/web-design-antwerpen', Comp: lazyRoute(() => import('./pages/WebDesignAntwerpen.jsx')) },
+  { path: '/seo-antwerpen', Comp: lazyRoute(() => import('./pages/SeoAntwerpen.jsx')) },
+  { path: '/webshop-antwerpen', Comp: lazyRoute(() => import('./pages/WebshopAntwerpen.jsx')) },
+  { path: '/ai-automatisering', Comp: lazyRoute(() => import('./pages/AiAutomatisering.jsx')) },
+]
+
+// Preload a route's chunk (called before hydration for the current path).
+export function preloadRoute(pathname) {
+  const path = pathname === '/' ? '/' : pathname.replace(/\/$/, '') || '/'
+  const match = ROUTES.find((r) => r.path === path)
+  return match ? match.Comp.preload() : Promise.resolve()
 }
 
 // Client-side navigation keeps the previous scroll position, so a link clicked
@@ -51,18 +58,13 @@ export default function App() {
     <>
       <PageMeta />
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/book" element={<Book />} />
-        <Route path="/over-ons" element={<OverOns />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/web-design-antwerpen" element={<WebDesignAntwerpen />} />
-        <Route path="/seo-antwerpen" element={<SeoAntwerpen />} />
-        <Route path="/webshop-antwerpen" element={<WebshopAntwerpen />} />
-        <Route path="/ai-automatisering" element={<AiAutomatisering />} />
-      </Routes>
+      <Suspense fallback={<div className="bg-black min-h-screen" />}>
+        <Routes>
+          {ROUTES.map(({ path, Comp }) => (
+            <Route key={path} path={path} element={<Comp />} />
+          ))}
+        </Routes>
+      </Suspense>
       <Analytics />
     </>
   )

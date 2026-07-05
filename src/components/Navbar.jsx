@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import logoIcon from '../assets/logo-icon.png'
+import logoIcon from '../assets/logo-icon.webp'
 
 const LINKS = [
   { label: 'Home', href: '#home' },

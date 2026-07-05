@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, ArrowUpRight } from 'lucide-react'
-import logoIcon from '../assets/logo-icon.png'
+import logoIcon from '../assets/logo-icon.webp'
 
 const PERSON_SCHEMA = {
   '@context': 'https://schema.org',

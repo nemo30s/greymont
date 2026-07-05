@@ -1,6 +1,7 @@
+import { Suspense } from 'react'
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router'
-import { Home } from './App.jsx'
+import Home from './pages/Home.jsx'
 import Book from './pages/Book.jsx'
 import Privacy from './pages/Privacy.jsx'
 import Terms from './pages/Terms.jsx'
@@ -27,9 +28,13 @@ const PAGES = {
 export function render(url) {
   const Component = PAGES[url]
   if (!Component) return ''
+  // Wrap in Suspense so the server emits the same boundary the client hydrates
+  // (App wraps <Routes> in <Suspense>) — keeps hydration markers aligned.
   return renderToString(
     <StaticRouter location={url}>
-      <Component />
+      <Suspense fallback={null}>
+        <Component />
+      </Suspense>
     </StaticRouter>
   )
 }

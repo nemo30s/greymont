@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, ArrowUpRight, Check } from 'lucide-react'
-import logoIcon from '../assets/logo-icon.png'
+import logoIcon from '../assets/logo-icon.webp'
 
 const SERVICES = [
   'Op maat gemaakte website design',

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
-import logoIcon from '../assets/logo-icon.png'
+import logoIcon from '../assets/logo-icon.webp'
 
 const CALENDLY_URL = 'https://calendly.com/diaconu-ionut029/30min'
 
