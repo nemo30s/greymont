@@ -4,44 +4,44 @@ import logoIcon from '../assets/logo-icon.png'
 
 const SECTIONS = [
   {
-    title: 'Services',
-    body: `Greymont provides web design and development, SEO management, and AI automation services to clients on a project or retainer basis. The specific scope, deliverables, and timelines for each engagement are defined in a separate proposal or statement of work agreed upon before work begins.`,
+    title: 'Diensten',
+    body: `Greymont levert webdesign en -development, SEO-beheer en AI-automatisering aan klanten, op projectbasis of via een maandelijkse samenwerking. De concrete scope, deliverables en timing van elke opdracht worden vastgelegd in een afzonderlijk voorstel dat beide partijen goedkeuren vóór de start van het werk.`,
   },
   {
-    title: 'Payment Terms',
-    body: `Project work typically requires a deposit before commencement, with the remaining balance due upon completion or at milestones agreed in writing. Retainer engagements are billed monthly in advance. Invoices not paid within 14 days of their due date may result in work being paused until payment is received.`,
+    title: 'Betaling',
+    body: `Projectwerk start doorgaans na betaling van een voorschot; het saldo is verschuldigd bij oplevering of volgens schriftelijk afgesproken mijlpalen. Maandelijkse samenwerkingen worden vooraf per maand gefactureerd. Bij facturen die 14 dagen na vervaldatum onbetaald blijven, kan het werk worden gepauzeerd tot de betaling is ontvangen.`,
   },
   {
-    title: 'Intellectual Property',
-    body: `Upon receipt of full payment, you own all deliverables created specifically for your project, including design assets, code, and written content. Greymont retains the right to display work in its portfolio and case studies unless you request otherwise in writing. We retain ownership of any pre-existing tools, frameworks, or proprietary systems used in the delivery of your project.`,
+    title: 'Intellectuele eigendom',
+    body: `Na volledige betaling ben jij eigenaar van alle deliverables die specifiek voor jouw project zijn gemaakt: designs, code en teksten. Greymont behoudt het recht om het werk te tonen in zijn portfolio en cases, tenzij je daar schriftelijk bezwaar tegen maakt. Bestaande tools, frameworks en eigen systemen die bij de uitvoering worden gebruikt, blijven eigendom van Greymont.`,
   },
   {
-    title: 'Revisions and Scope',
-    body: `Each project proposal includes a defined number of revision rounds. Requests that fall outside the agreed scope — including additional features, redesigns, or changes to original briefs — may be subject to additional fees. We will always notify you before proceeding with out-of-scope work.`,
+    title: 'Revisies en scope',
+    body: `Elk voorstel bevat een afgesproken aantal revisierondes. Vragen die buiten de afgesproken scope vallen — extra functies, herontwerpen of wijzigingen aan de oorspronkelijke briefing — kunnen extra kosten met zich meebrengen. We verwittigen je altijd vóór we werk buiten de scope uitvoeren.`,
   },
   {
-    title: 'Confidentiality',
-    body: `Both parties agree to keep confidential any non-public business information shared during the course of the engagement. This includes business strategies, client data, pricing, and internal processes. This obligation survives the termination of any agreement between us.`,
+    title: 'Vertrouwelijkheid',
+    body: `Beide partijen houden alle niet-publieke bedrijfsinformatie die tijdens de samenwerking wordt gedeeld vertrouwelijk: strategieën, klantgegevens, prijzen en interne processen. Deze verplichting blijft gelden na afloop van de samenwerking.`,
   },
   {
-    title: 'Limitation of Liability',
-    body: `Greymont is not liable for indirect, incidental, or consequential damages arising from the use of our services. Our total liability in connection with any engagement shall not exceed the total fees paid by you in the three months preceding the claim. We make no guarantees regarding specific SEO rankings, traffic figures, or revenue outcomes, as these depend on factors outside our control.`,
+    title: 'Aansprakelijkheid',
+    body: `Greymont is niet aansprakelijk voor indirecte schade of gevolgschade die voortvloeit uit het gebruik van onze diensten. Onze totale aansprakelijkheid is beperkt tot het bedrag dat je ons in de drie maanden vóór de claim hebt betaald. We geven geen garanties op specifieke Google-posities, bezoekersaantallen of omzetcijfers — die hangen af van factoren buiten onze controle.`,
   },
   {
-    title: 'Termination',
-    body: `Either party may terminate an ongoing engagement with 30 days written notice. In the event of termination, you are responsible for fees covering work completed up to the termination date. Deposits are non-refundable once work has commenced.`,
+    title: 'Beëindiging',
+    body: `Beide partijen kunnen een lopende samenwerking beëindigen met een schriftelijke opzegtermijn van 30 dagen. Bij beëindiging blijven de kosten voor het reeds geleverde werk verschuldigd. Voorschotten zijn niet terugbetaalbaar zodra het werk is gestart.`,
   },
   {
-    title: 'Governing Law',
-    body: `These terms are governed by the laws of Romania. Any disputes arising from our engagement shall first be subject to good-faith negotiation. If unresolved, disputes shall be referred to the courts of competent jurisdiction in Romania.`,
+    title: 'Toepasselijk recht',
+    body: `Op deze voorwaarden is het Belgisch recht van toepassing. Geschillen worden eerst in onderling overleg en te goeder trouw besproken. Raken we er niet uit, dan zijn de rechtbanken van Antwerpen bevoegd.`,
   },
   {
-    title: 'Changes to These Terms',
-    body: `We may update these Terms of Service from time to time. When we do, we will update the date at the top of this page. Continued use of our services after changes are posted constitutes acceptance of the revised terms.`,
+    title: 'Wijzigingen',
+    body: `We kunnen deze voorwaarden af en toe aanpassen. Bij elke wijziging passen we de datum bovenaan deze pagina aan. Wie na een wijziging gebruik blijft maken van onze diensten, aanvaardt de aangepaste voorwaarden.`,
   },
   {
     title: 'Contact',
-    body: `If you have any questions about these Terms, please contact us at hello@greymont.agency.`,
+    body: `Vragen over deze voorwaarden? Mail ons op hello@greymont.agency.`,
   },
 ]
 
@@ -59,7 +59,7 @@ export default function Terms() {
           className="flex items-center gap-2 text-white/50 hover:text-white transition-colors font-body text-sm"
         >
           <ArrowLeft size={14} />
-          Back to site
+          Terug naar de site
         </Link>
       </div>
 
@@ -67,12 +67,12 @@ export default function Terms() {
       <div className="max-w-2xl mx-auto px-8 pt-40 pb-32">
         <div className="mb-16">
           <div className="inline-flex liquid-glass rounded-full px-3.5 py-1 mb-6">
-            <span className="text-white text-sm font-medium font-body">Legal</span>
+            <span className="text-white text-sm font-medium font-body">Juridisch</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-heading italic text-white leading-[0.88] tracking-tight mb-4">
-            Terms of Service
+            Algemene voorwaarden
           </h1>
-          <p className="text-white/40 font-body font-light text-sm">Last updated: April 2026</p>
+          <p className="text-white/40 font-body font-light text-sm">Laatst bijgewerkt: juli 2026</p>
         </div>
 
         <div className="flex flex-col gap-12">
@@ -85,9 +85,9 @@ export default function Terms() {
         </div>
 
         <div className="mt-20 pt-8 border-t border-white/10 flex items-center justify-between flex-wrap gap-4">
-          <span className="text-white/30 text-xs font-body">© 2026 Greymont. All rights reserved.</span>
+          <span className="text-white/30 text-xs font-body">© 2026 Greymont. Alle rechten voorbehouden.</span>
           <Link to="/privacy" className="text-white/30 text-xs font-body hover:text-white/60 transition-colors">
-            Privacy Policy
+            Privacybeleid
           </Link>
         </div>
       </div>

@@ -4,32 +4,32 @@ import logoIcon from '../assets/logo-icon.png'
 
 const SECTIONS = [
   {
-    title: 'Information We Collect',
-    body: `We collect information you provide directly to us, such as your name, email address, and any details you share when booking a call or submitting a contact form. We also collect standard usage data — pages visited, time on site, browser type — through analytics tools to help us improve the experience.`,
+    title: 'Welke gegevens we verzamelen',
+    body: `We verzamelen de gegevens die je zelf met ons deelt — zoals je naam, e-mailadres en de informatie die je doorgeeft wanneer je een gesprek inplant of ons rechtstreeks mailt. Daarnaast verzamelen we anonieme gebruiksstatistieken (bezochte pagina's, browsertype) via Vercel Analytics om de website te verbeteren. Deze statistieken zijn niet herleidbaar tot jou als persoon.`,
   },
   {
-    title: 'How We Use Your Information',
-    body: `We use the information we collect to respond to your enquiries, schedule and manage calls, deliver the services you engage us for, send occasional updates if you have opted in, and improve our website and service quality. We do not sell, rent, or trade your personal information to any third party.`,
+    title: 'Waarvoor we je gegevens gebruiken',
+    body: `We gebruiken je gegevens om te antwoorden op je vragen, gesprekken in te plannen en op te volgen, de diensten te leveren waarvoor je ons inschakelt, en onze website en dienstverlening te verbeteren. We verkopen, verhuren of verhandelen je persoonsgegevens nooit aan derden.`,
   },
   {
     title: 'Cookies',
-    body: `Our website uses cookies to understand how visitors interact with our content. These are analytics cookies only — we do not use advertising or tracking cookies. You can disable cookies in your browser settings at any time without affecting your ability to use the site.`,
+    body: `Deze website gebruikt geen cookies. Onze statistieken lopen via Vercel Analytics, een privacyvriendelijke oplossing die zonder cookies werkt en geen individuele bezoekers volgt. Je hoeft dus niets te accepteren of te weigeren.`,
   },
   {
-    title: 'Third-Party Services',
-    body: `We use a small number of trusted third-party tools to operate our business, including Calendly for booking calls and standard analytics providers. These services have their own privacy policies and we encourage you to review them. We only share information with these services to the extent necessary for them to perform their functions.`,
+    title: 'Diensten van derden',
+    body: `We gebruiken een beperkt aantal betrouwbare externe diensten: Calendly voor het inplannen van gesprekken en Vercel voor hosting en anonieme statistieken. Deze diensten hebben een eigen privacybeleid; we delen enkel de gegevens die strikt nodig zijn om hun functie te vervullen.`,
   },
   {
-    title: 'Data Retention',
-    body: `We retain your personal information only for as long as necessary to fulfil the purposes for which it was collected or to comply with legal obligations. If you would like us to delete your data, you can contact us at any time and we will act on your request promptly.`,
+    title: 'Bewaartermijn',
+    body: `We bewaren je persoonsgegevens niet langer dan nodig voor het doel waarvoor ze verzameld zijn, of zolang de wet dat vereist. Wil je dat we je gegevens verwijderen? Eén mail volstaat en we handelen je verzoek snel af.`,
   },
   {
-    title: 'Your Rights',
-    body: `You have the right to access, correct, or delete any personal information we hold about you. You also have the right to withdraw consent for any processing based on consent, and to lodge a complaint with a supervisory authority. To exercise any of these rights, please contact us directly.`,
+    title: 'Jouw rechten',
+    body: `Je hebt het recht om je persoonsgegevens in te kijken, te corrigeren of te laten verwijderen. Je kan ook een eerder gegeven toestemming intrekken. Ben je niet tevreden over hoe we met je gegevens omgaan, dan kan je een klacht indienen bij de Gegevensbeschermingsautoriteit (gegevensbeschermingsautoriteit.be). Neem voor al deze rechten gewoon contact met ons op.`,
   },
   {
     title: 'Contact',
-    body: `If you have any questions about this Privacy Policy or how we handle your data, please reach out to us at hello@greymont.agency. We aim to respond to all enquiries within two business days.`,
+    body: `Vragen over dit privacybeleid of over hoe we met je gegevens omgaan? Mail ons op hello@greymont.agency. We antwoorden doorgaans binnen twee werkdagen.`,
   },
 ]
 
@@ -47,7 +47,7 @@ export default function Privacy() {
           className="flex items-center gap-2 text-white/50 hover:text-white transition-colors font-body text-sm"
         >
           <ArrowLeft size={14} />
-          Back to site
+          Terug naar de site
         </Link>
       </div>
 
@@ -55,12 +55,12 @@ export default function Privacy() {
       <div className="max-w-2xl mx-auto px-8 pt-40 pb-32">
         <div className="mb-16">
           <div className="inline-flex liquid-glass rounded-full px-3.5 py-1 mb-6">
-            <span className="text-white text-sm font-medium font-body">Legal</span>
+            <span className="text-white text-sm font-medium font-body">Juridisch</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-heading italic text-white leading-[0.88] tracking-tight mb-4">
-            Privacy Policy
+            Privacybeleid
           </h1>
-          <p className="text-white/40 font-body font-light text-sm">Last updated: April 2026</p>
+          <p className="text-white/40 font-body font-light text-sm">Laatst bijgewerkt: juli 2026</p>
         </div>
 
         <div className="flex flex-col gap-12">
@@ -73,9 +73,9 @@ export default function Privacy() {
         </div>
 
         <div className="mt-20 pt-8 border-t border-white/10 flex items-center justify-between flex-wrap gap-4">
-          <span className="text-white/30 text-xs font-body">© 2026 Greymont. All rights reserved.</span>
+          <span className="text-white/30 text-xs font-body">© 2026 Greymont. Alle rechten voorbehouden.</span>
           <Link to="/terms" className="text-white/30 text-xs font-body hover:text-white/60 transition-colors">
-            Terms of Service
+            Algemene voorwaarden
           </Link>
         </div>
       </div>

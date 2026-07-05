@@ -5,10 +5,10 @@ import logoIcon from '../assets/logo-icon.png'
 const CALENDLY_URL = 'https://calendly.com/diaconu-ionut029/30min'
 
 const BULLETS = [
-  { label: 'Duration', value: '30 minutes' },
-  { label: 'Format', value: 'Google Meet or phone' },
-  { label: 'What to expect', value: 'No pitch, no pressure — just an honest look at what your business needs' },
-  { label: 'Next step', value: "A clear proposal within 24 hours if it's a fit" },
+  { label: 'Duur', value: '30 minuten' },
+  { label: 'Formaat', value: 'Google Meet of telefoon' },
+  { label: 'Wat je mag verwachten', value: 'Geen pitch, geen druk — gewoon een eerlijke blik op wat jouw zaak nodig heeft' },
+  { label: 'Volgende stap', value: 'Een concreet voorstel binnen 24 uur als het klikt' },
 ]
 
 export default function Book() {
@@ -26,7 +26,7 @@ export default function Book() {
           className="flex items-center gap-2 text-white/50 hover:text-white transition-colors text-sm font-body"
         >
           <ArrowLeft size={14} />
-          Back to site
+          Terug naar de site
         </Link>
       </div>
 
@@ -35,14 +35,14 @@ export default function Book() {
         {/* Header */}
         <div className="mb-12 text-center">
           <div className="inline-flex liquid-glass rounded-full px-3.5 py-1 mb-5">
-            <span className="text-white text-sm font-medium font-body">Free Audit Call</span>
+            <span className="text-white text-sm font-medium font-body">Gratis adviesgesprek</span>
           </div>
           <h1 className="font-heading italic text-white leading-[0.9] tracking-tight mb-4"
             style={{ fontSize: 'clamp(2.4rem, 5vw, 4rem)' }}>
-            Let's talk about your business.
+            Laten we het over jouw zaak hebben.
           </h1>
           <p className="text-white/50 font-body font-light max-w-md mx-auto" style={{ fontSize: '15px' }}>
-            Thirty minutes to understand where you are and what's possible. Completely free, no strings attached.
+            Dertig minuten om te begrijpen waar je staat en wat er mogelijk is. Volledig gratis, zonder verplichtingen.
           </p>
         </div>
 
@@ -51,7 +51,7 @@ export default function Book() {
 
           {/* Left — what to expect */}
           <div className="flex flex-col gap-6">
-            <h2 className="font-body font-medium text-white/80 text-sm uppercase tracking-widest">What to expect</h2>
+            <h2 className="font-body font-medium text-white/80 text-sm uppercase tracking-widest">Wat je mag verwachten</h2>
             <ul className="flex flex-col gap-5">
               {BULLETS.map(({ label, value }) => (
                 <li key={label} className="flex flex-col gap-1">
@@ -63,7 +63,7 @@ export default function Book() {
 
             <div className="mt-4 liquid-glass rounded-2xl p-5">
               <p className="text-white/40 font-body font-light text-xs leading-relaxed">
-                We take on a limited number of new clients each month to keep the quality of work high. If there's a fit, you'll have a proposal in your inbox within 24 hours.
+                We nemen elke maand een beperkt aantal nieuwe klanten aan om de kwaliteit hoog te houden. Als het klikt, ligt er binnen 24 uur een voorstel in je mailbox.
               </p>
             </div>
           </div>
@@ -73,7 +73,7 @@ export default function Book() {
             <iframe
               src={CALENDLY_URL}
               style={{ width: '100%', height: '100%', border: 'none', display: 'block' }}
-              title="Book a call"
+              title="Plan een gesprek"
             />
           </div>
 
