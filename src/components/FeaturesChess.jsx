@@ -106,33 +106,33 @@ export default function FeaturesChess() {
         transition={{ duration: 0.7, ease: 'easeOut' }}
       >
         <div className="inline-flex liquid-glass rounded-full px-3.5 py-1 mb-4">
-          <span className="text-white text-sm font-medium font-body">What We Do</span>
+          <span className="text-white text-sm font-medium font-body">Wat we doen</span>
         </div>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading italic text-white tracking-tight leading-[0.9]">
-          One system. Built to fill your calendar
+          Eén systeem. Gebouwd om jouw agenda te vullen.
         </h2>
       </motion.div>
 
       <ChessRow
-        title="The Site"
-        body="A site that sells, not just impresses. Designed to convert, built to rank, ready to grow."
-        cta="Book a Call"
+        title="De site"
+        body="Een site die verkoopt, niet alleen imponeert. Ontworpen om te converteren, gebouwd om te scoren in Google, klaar om mee te groeien."
+        cta="Plan een gesprek"
         videoSrc="/videos/feature-web.mp4"
         reverse={false}
       />
 
       <ChessRow
-        title="The Search"
-        body="SEO baked in from day one. Schema, structure, speed, and search console — built into the architecture, not patched on later."
-        cta="Book a Call"
+        title="De vindbaarheid"
+        body="SEO vanaf dag één. Schema, structuur, snelheid en Search Console — ingebouwd in de architectuur, niet achteraf bijgeplakt."
+        cta="Plan een gesprek"
         videoSrc="/videos/feature-seo.mp4"
         reverse={true}
       />
 
       <ChessRow
-        title="The Smarts"
-        body="Custom AI features your competitors can't ship. Booking assistants, lead qualifiers, multilingual chatbots — built into the site, not bolted on."
-        cta="Book a Call"
+        title="De slimme laag"
+        body="AI-features die je concurrenten niet kunnen bouwen. Boekingsassistenten, leadkwalificatie, meertalige chatbots — ingebouwd in de site, niet erbovenop geschroefd."
+        cta="Plan een gesprek"
         videoSrc="/videos/feature-ai.mp4"
         looped={true}
         reverse={false}

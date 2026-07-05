@@ -4,23 +4,23 @@ import { motion } from 'motion/react'
 const CARDS = [
   {
     Icon: Layers,
-    title: 'Full-Stack Execution',
-    body: 'Design, development, SEO, and automations — one team, one vision, zero handoff friction.',
+    title: 'Alles uit één hand',
+    body: 'Design, development, SEO en automatisering — één visie, nul frictie tussen schakels.',
   },
   {
     Icon: BrainCircuit,
-    title: 'AI-Native by Default',
-    body: 'Every project ships with automation built in. Not bolted on later. Not optional. Standard.',
+    title: 'AI-native als standaard',
+    body: 'Elk project wordt opgeleverd met automatisering ingebouwd. Niet achteraf toegevoegd. Niet optioneel. Standaard.',
   },
   {
     Icon: TrendingUp,
-    title: 'SEO From Day One',
-    body: 'Technical SEO, content structure, and performance baked into every build — not fixed after the fact.',
+    title: 'SEO vanaf dag één',
+    body: 'Technische SEO, contentstructuur en performance zitten in elke build — niet achteraf gerepareerd.',
   },
   {
     Icon: Users,
-    title: 'A Partner, Not a Vendor',
-    body: 'Monthly retainers, real reporting, and a team that treats your growth like their own.',
+    title: 'Een partner, geen leverancier',
+    body: 'Maandelijkse samenwerking, echte rapportering, en iemand die jouw groei behandelt als zijn eigen.',
   },
 ]
 
@@ -37,10 +37,10 @@ export default function FeaturesGrid() {
         transition={{ duration: 0.7, ease: 'easeOut' }}
       >
         <div className="inline-flex liquid-glass rounded-full px-3.5 py-1 mb-4">
-          <span className="text-white text-sm font-medium font-body">Why Us</span>
+          <span className="text-white text-sm font-medium font-body">Waarom Greymont</span>
         </div>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading italic text-white tracking-tight leading-[0.9]">
-          The difference is everything.
+          Dit maakt het verschil.
         </h2>
       </motion.div>
 

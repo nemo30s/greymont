@@ -4,10 +4,10 @@ import HlsVideo from './HlsVideo'
 const SRC = 'https://stream.mux.com/NcU3HlHeF7CUL86azTTzpy3Tlb00d6iF3BmCdFslMJYM.m3u8'
 
 const STATS = [
-  { value: '14 days', label: 'Live, or we keep building until you are.' },
-  { value: 'Day 1', label: 'SEO baked in from the first commit.' },
-  { value: 'No handoffs', label: 'The person who designs is the person who ships.' },
-  { value: 'Real numbers', label: 'Monthly reporting. No vanity metrics.' },
+  { value: '14 dagen', label: 'Live, of we bouwen door tot je het bent.' },
+  { value: 'Dag 1', label: 'SEO ingebakken vanaf de eerste regel code.' },
+  { value: 'Geen doorgeefluik', label: 'Wie het ontwerpt, zet het ook live. Eén aanspreekpunt, van start tot livegang.' },
+  { value: 'Echte cijfers', label: 'Maandelijkse rapportering. Enkel cijfers die ertoe doen.' },
 ]
 
 export default function StatsSection() {
@@ -33,7 +33,7 @@ export default function StatsSection() {
           transition={{ duration: 0.7, ease: [0.25, 1, 0.5, 1] }}
         >
           <p className="text-white/40 font-body font-light text-sm tracking-widest uppercase mb-10">
-            How we work
+            Zo werken we
           </p>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
             {STATS.map(({ value, label }, i) => (

@@ -5,8 +5,8 @@ import logoIcon from '../assets/logo-icon.png'
 
 const LINKS = [
   { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'Process', href: '#process' },
+  { label: 'Diensten', href: '#services' },
+  { label: 'Werkwijze', href: '#process' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -43,7 +43,7 @@ export default function Navbar() {
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className="focus:outline-none"
-        aria-label="Back to top"
+        aria-label="Terug naar boven"
       >
         <img src={logoIcon} alt="Greymont" className="h-16 w-16 object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
       </button>
@@ -72,7 +72,7 @@ export default function Navbar() {
             className="flex items-center gap-1 bg-white text-black rounded-full font-body font-medium hover:bg-white/90 transition-colors whitespace-nowrap"
             style={{ padding: '7px 14px', fontSize: '13px' }}
           >
-            Get Started
+            Plan een gesprek
             <ArrowUpRight size={13} />
           </Link>
         </div>

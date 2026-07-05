@@ -8,18 +8,18 @@ const SRC = 'https://stream.mux.com/9JXDljEVWYwWu01PUkAemafDugK89o01BR6zqJ3aS9u0
 const STEPS = [
   {
     number: '01',
-    title: 'Discovery Call',
-    body: "We learn your business, your goals, and what's holding you back. No templates. No assumptions. Just a clear picture of what you actually need.",
+    title: 'Kennismakingsgesprek',
+    body: 'We leren je zaak kennen, je doelen, en wat je tegenhoudt. Geen templates. Geen aannames. Gewoon een helder beeld van wat je écht nodig hebt.',
   },
   {
     number: '02',
-    title: 'We Build & Automate',
-    body: 'Design, development, SEO foundations, and AI automations — all executed by one team, in parallel. Most clients are live in under two weeks.',
+    title: 'Bouwen & automatiseren',
+    body: 'Design, development, SEO-fundament en AI-automatisering — alles uit één hand, parallel uitgevoerd. De meeste klanten staan binnen twee weken live.',
   },
   {
     number: '03',
-    title: 'It Compounds',
-    body: 'Traffic climbs. Leads arrive. Your automations run while you sleep. Every month, the gap between you and your competitors widens — and it widens on its own.',
+    title: 'Het groeit vanzelf',
+    body: 'Je verkeer stijgt. Leads komen binnen. Je automatisering draait terwijl jij slaapt. Elke maand wordt de kloof met je concurrenten groter — en dat gebeurt vanzelf.',
   },
 ]
 
@@ -44,10 +44,10 @@ export default function StartSection() {
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
           <div className="liquid-glass rounded-full px-3.5 py-1 mb-5">
-            <span className="text-white text-sm font-medium font-body">How It Works</span>
+            <span className="text-white text-sm font-medium font-body">Hoe het werkt</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading italic text-white tracking-tight leading-[0.9] max-w-xl">
-            Simple process. Serious results.
+            Eenvoudig proces. Serieuze resultaten.
           </h2>
         </motion.div>
 
@@ -81,7 +81,7 @@ export default function StartSection() {
             to="/book"
             className="inline-flex items-center gap-1.5 liquid-glass-strong rounded-full px-6 py-3 text-white text-sm font-body font-medium hover:opacity-90 transition-opacity"
           >
-            Book a Free Call
+            Plan een gratis gesprek
             <ArrowUpRight size={15} />
           </Link>
         </motion.div>

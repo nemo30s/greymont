@@ -89,7 +89,7 @@ export default function HeroSection() {
             className="liquid-glass-strong rounded-full text-white font-body font-medium flex items-center gap-1.5 hover:opacity-90 transition-opacity"
             style={{ padding: '10px 22px', fontSize: '13px' }}
           >
-            Book a Call
+            Plan een gesprek
             <ArrowUpRight size={14} />
           </Link>
           <a
@@ -97,7 +97,7 @@ export default function HeroSection() {
             className="bg-white text-black rounded-full font-body font-medium hover:bg-white/90 transition-colors"
             style={{ padding: '10px 22px', fontSize: '13px' }}
           >
-            What We Do
+            Wat we doen
           </a>
         </motion.div>
 
